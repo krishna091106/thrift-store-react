@@ -89,6 +89,9 @@ export default function ProductDetail() {
     .sort(() => 0.5 - Math.random())
     .slice(0, 4);
 
+  /* ---------- BASE URL ---------- */
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div className="px-10 py-16">
       <div className="grid md:grid-cols-2 gap-16">
@@ -97,7 +100,7 @@ export default function ProductDetail() {
         <div>
           <div className="relative">
             <img
-              src={mainImage}
+              src={`${baseUrl}${mainImage}`}
               alt={product.name}
               className={`h-96 w-full object-cover rounded-lg ${
                 isSold ? "opacity-50" : ""
@@ -124,7 +127,7 @@ export default function ProductDetail() {
             {product.images.map((img, index) => (
               <img
                 key={img}
-                src={img}
+                src={`${baseUrl}${img}`}
                 onClick={() => {
                   setMainImage(img);
                   setCurrentIndex(index);
@@ -193,9 +196,17 @@ export default function ProductDetail() {
           {!isSold && (
             <button
               onClick={() => {
-                const imageUrl = `${window.location.origin}${mainImage}`;
-                const message = `🛍️ ${product.name}\n₹${product.price}\n${imageUrl}`;
+                const imageUrl =
+                  `${window.location.origin}${baseUrl}${mainImage}`;
+
+                const message = `🛍️ *${product.name}*
+💰 Price: ₹${product.price}
+
+🖼️ Image:
+${imageUrl}`;
+
                 const phone = "919484758840";
+
                 window.open(
                   `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
                     message
@@ -226,7 +237,7 @@ export default function ProductDetail() {
             >
               <div className="overflow-hidden rounded-lg">
                 <img
-                  src={item.images[0]}
+                  src={`${baseUrl}${item.images[0]}`}
                   className="h-60 w-full object-cover group-hover:scale-105 transition"
                 />
               </div>
