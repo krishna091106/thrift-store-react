@@ -8,7 +8,7 @@
     "price": 2499,
     "condition": 90,
     "sizes": ["30", "32", "34"],
-    "images": ["/img/p1.jpg", "/img/p1.jpg", "/img/p3.jpg"],
+    "images": ["/img/p1.jpg"],
     "description": "Classic vintage blue denim jeans with premium wash.",
     "active": "sold"
   },

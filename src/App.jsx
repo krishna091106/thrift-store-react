@@ -2,8 +2,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import NavBar from "./components/Navbar";
 import Home from "./pages/Home";
-import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -17,7 +17,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="min-h-screen bg-black text-white">
       <NavBar />
       <ScrollToTop />
 
