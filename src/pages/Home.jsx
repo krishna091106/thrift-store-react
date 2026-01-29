@@ -4,9 +4,9 @@ import products from "../data/products.json";
 import { Link } from "react-router-dom";
 
 const categories = [
-  { name: "Jeans", slug: "jeans", image: "/img/p1.jpg" },
-  { name: "Shirts", slug: "shirts", image: "/img/p2.jpg" },
-  { name: "Tees", slug: "tees", image: "/img/p3.jpg" },
+  { name: "Jeans", slug: "jeans", image: "img/p1.jpg" },
+  { name: "Shirts", slug: "shirts", image: "img/p2.jpg" },
+  { name: "Tees", slug: "tees", image: "img/p3.jpg" },
 ];
 
 export default function Home() {

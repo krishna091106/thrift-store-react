@@ -10,7 +10,7 @@ export default function Mission() {
           Learn More
         </button>
       </div>
-      <img src="/bg2.png" className="w-full h-[400px] object-cover" />
+      <img src="bg2.png" className="w-full h-[400px] object-cover" />
     </section>
   );
 }
