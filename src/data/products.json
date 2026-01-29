@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "name": "Vintage Blue Jeans",
+    "brand": "Levis",
+    "category": "jeans",
+    "color": "blue",
+    "price": 2499,
+    "condition": 90,
+    "sizes": ["30", "32", "34"],
+    "images": ["/img/p1.jpg", "/img/p1.jpg", "/img/p3.jpg"],
+    "description": "Classic vintage blue denim jeans with premium wash.",
+    "active": "sold"
+  },
+  {
+    "id": "2",
+    "name": "Black Oversized Tee",
+    "brand": "H&M",
+    "category": "tees",
+    "color": "black",
+    "price": 999,
+    "condition": 95,
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["/img/p3.jpg"],
+    "description": "Minimal black oversized t-shirt with soft cotton feel.",
+    "active": "unsold"
+  },
+  {
+    "id": "3",
+    "name": "White Formal Shirt",
+    "brand": "Zara",
+    "category": "shirts",
+    "color": "white",
+    "price": 1799,
+    "condition": 92,
+    "sizes": ["M", "L", "XL"],
+    "images": ["/img/p2.jpg"],
+    "description": "Clean white formal shirt perfect for smart casual looks.",
+    "active": "unsold"
+  }
+]
