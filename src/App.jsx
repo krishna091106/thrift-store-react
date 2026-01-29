@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import NavBar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -17,17 +17,15 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="bg-black min-h-screen text-white">
-        <NavBar />
-        <ScrollToTop />
+    <div className="bg-black min-h-screen text-white">
+      <NavBar />
+      <ScrollToTop />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+    </div>
   );
 }
