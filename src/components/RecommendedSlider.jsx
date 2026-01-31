@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const items = [
-  { img: "/models/model1.jpg" },
-  { img: "/models/model2.jpg" },
-  { img: "/models/model3.jpg" },
+  { img: "models/model1.jpg" },
+  { img: "models/model2.jpg" },
+  { img: "models/model3.jpg" },
 ];
 
 export default function RecommendedSlider() {
