@@ -1,7 +1,9 @@
 import Hero from "../components/Hero";
 import Mission from "../components/Mission";
 import products from "../data/products.json";
+import RecommendedSlider from "../components/RecommendedSlider";
 import { Link } from "react-router-dom";
+import ContactUs from "../components/ContactUs";
 
 const categories = [
   { name: "Jeans", slug: "jeans", image: "img/p1.jpg" },
@@ -16,7 +18,7 @@ export default function Home() {
     <>
       <Hero />
 {/* CATEGORIES */}
-      <div className="px-10 py-16">
+      <div className="px-10 pt-16">
         <div className="flex gap-6 overflow-x-auto pb-4 no-scrollbar scroll-smooth">
           {categories.map((cat) => (
             <Link
@@ -53,7 +55,7 @@ export default function Home() {
             >
               <img
                 src={product.images?.[0]}
-                className="h-80 w-full object-cover"
+                className="h-50 md:h-90 w-full object-cover"
               />
               <h3 className="mt-4 text-sm">{product.name}</h3>
               <p className="text-gray-400 text-sm">₹{product.price}</p>
@@ -61,8 +63,9 @@ export default function Home() {
           ))}
         </div>
       </div>
-
+        <RecommendedSlider />
       <Mission />
+      <ContactUs/>
     </>
   );
 }

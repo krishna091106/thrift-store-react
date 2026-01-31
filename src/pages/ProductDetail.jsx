@@ -104,7 +104,7 @@ export default function ProductDetail() {
             <img
               src={`${baseUrl}${mainImage}`}
               alt={product.name}
-              className={`h-96 w-full object-cover rounded-lg ${isSold ? "opacity-50" : ""
+              className={`h-96 md:h-140 w-full object-cover rounded-lg ${isSold ? "opacity-50" : ""
                 }`}
             />
 
@@ -233,10 +233,10 @@ export default function ProductDetail() {
               to={`/product/${item.id}`}
               className="group"
             >
-              <div className="overflow-hidden rounded-lg">
+              <div className="overflow-hidden">
                 <img
                   src={`${baseUrl}${item.images[0]}`}
-                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                  className="h-50 w-full object-cover "
                 />
               </div>
               <p className="mt-3 text-gray-300 font-semibold">
