@@ -4,6 +4,7 @@ import NavBar from "./components/Navbar";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
+import Mission from "./components/Mission";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

@@ -78,7 +78,7 @@ export default function Products() {
                   onChange={() => 
                     categories.length === 3 ? setCategories([]) : setCategories(["jeans", "shirts", "tees"])
                   }
-                  className="w-4 h-4 accent-white bg-black border border-gray-600 rounded"
+                  className="w-4 h-4 accent-blue-600  bg-black border border-gray-600 rounded"
                 />
                 <span className="ml-3 text-sm font-semibold">All</span>
               </label>
@@ -88,7 +88,7 @@ export default function Products() {
                     type="checkbox"
                     checked={categories.includes(cat)}
                     onChange={() => toggleCategory(cat)}
-                    className="w-4 h-4 accent-white bg-black border border-gray-600 rounded"
+                    className="w-4 h-4 accent-blue-600 bg-black border border-gray-600 rounded"
                   />
                   <span className="ml-3 text-sm">{cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
                 </label>
@@ -108,7 +108,7 @@ export default function Products() {
               max="5000"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
               style={{
                 background: `linear-gradient(to right, #ffffff 0%, #ffffff ${(price - 500) / 45}%, #374151 ${(price - 500) / 45}%, #374151 100%)`
               }}
@@ -291,7 +291,7 @@ export default function Products() {
                       onChange={() => 
                         categories.length === 3 ? setCategories([]) : setCategories(["jeans", "shirts", "tees"])
                       }
-                      className="w-5 h-5 accent-white bg-gray-700 border border-gray-600 rounded"
+                      className="w-5 h-5 accent-blue-600 bg-gray-700 border border-gray-600 rounded"
                     />
                     <span className="ml-3 text-sm font-semibold">All Categories</span>
                   </label>
@@ -301,7 +301,7 @@ export default function Products() {
                         type="checkbox"
                         checked={categories.includes(cat)}
                         onChange={() => toggleCategory(cat)}
-                        className="w-5 h-5 accent-white bg-gray-700 border border-gray-600 rounded"
+                        className="w-5 h-5 accent-blue-600 bg-gray-700 border border-gray-600 rounded"
                       />
                       <span className="ml-3 text-sm">
                         {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -323,7 +323,7 @@ export default function Products() {
                   max="5000"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
-                  className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   style={{
                     background: `linear-gradient(to right, #ffffff 0%, #ffffff ${(price - 500) / 45}%, #374151 ${(price - 500) / 45}%, #374151 100%)`
                   }}

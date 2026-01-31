@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import products from "../data/products.json";
+import { Link } from "react-router-dom";
+
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -48,7 +50,7 @@ export default function ProductDetail() {
             (item) =>
               item.id.toString() === id ||
               item.name.toLowerCase() ===
-                foundProduct.name.toLowerCase()
+              foundProduct.name.toLowerCase()
           );
           if (match) sold = match.sold;
         }
@@ -102,9 +104,8 @@ export default function ProductDetail() {
             <img
               src={`${baseUrl}${mainImage}`}
               alt={product.name}
-              className={`h-96 w-full object-cover rounded-lg ${
-                isSold ? "opacity-50" : ""
-              }`}
+              className={`h-96 w-full object-cover rounded-lg ${isSold ? "opacity-50" : ""
+                }`}
             />
 
             <button
@@ -133,10 +134,9 @@ export default function ProductDetail() {
                   setCurrentIndex(index);
                 }}
                 className={`w-24 h-24 object-cover cursor-pointer rounded-lg border
-                  ${
-                    mainImage === img
-                      ? "border-purple-500"
-                      : "border-transparent"
+                  ${mainImage === img
+                    ? "border-purple-500"
+                    : "border-transparent"
                   }`}
               />
             ))}
@@ -180,11 +180,10 @@ export default function ProductDetail() {
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`px-4 py-2 rounded-lg border ${
-                      selectedSize === size
-                        ? "bg-purple-600 text-white border-purple-600"
-                        : "border-gray-600 text-gray-400"
-                    }`}
+                    className={`px-4 py-2 rounded-lg border ${selectedSize === size
+                      ? "bg-purple-600 text-white border-purple-600"
+                      : "border-gray-600 text-gray-400"
+                      }`}
                   >
                     {size}
                   </button>
@@ -200,10 +199,9 @@ export default function ProductDetail() {
                   `${window.location.origin}${baseUrl}${mainImage}`;
 
                 const message = `🛍️ *${product.name}*
-💰 Price: ₹${product.price}
-
-🖼️ Image:
-${imageUrl}`;
+                💰 Price: ₹${product.price}
+                🖼️ Image:
+                  ${imageUrl}`;
 
                 const phone = "919484758840";
 
@@ -230,9 +228,9 @@ ${imageUrl}`;
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {suggestedItems.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href={`/product/${item.id}`}
+              to={`/product/${item.id}`}
               className="group"
             >
               <div className="overflow-hidden rounded-lg">
@@ -245,7 +243,8 @@ ${imageUrl}`;
                 {item.name}
               </p>
               <p className="text-gray-500">₹{item.price}</p>
-            </a>
+            </Link>
+
           ))}
         </div>
       </div>
